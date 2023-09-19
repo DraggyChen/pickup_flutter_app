@@ -147,10 +147,17 @@ class _PersonalDataState extends State<PersonalData> {
                 Text(uni_NTSU),
               ],
             ),
+            SizedBox(height: 20,),
 
             /* 學生證或教職員工作證 */
-            ImagePickerWidget(hint: '學生證正面'),
-            // ImagePickerWidget(hint: '學生證反面'),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text("學生證或教職員工作證"),
+            ),
+            SizedBox(height: 20,),
+            ImagePickerWidget(hint: '正面(大頭照)', width: 200, height: 100),
+            SizedBox(height: 20),
+            ImagePickerWidget(hint: '反面(學校名稱)', width: 200, height: 100,),
 
 
           ],

@@ -5,8 +5,10 @@ import 'package:image_picker/image_picker.dart';
 
 class ImagePickerWidget extends StatefulWidget {
   final String hint;
+  final double? width;
+  final double? height;
 
-  const ImagePickerWidget({required this.hint});
+  const ImagePickerWidget({required this.hint, this.width, this.height});
 
   @override
   _ImagePickerWidgetState createState() => _ImagePickerWidgetState();
@@ -28,14 +30,13 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
     }
   }
 
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: _pickImage,
       child: Container(
-        width: double.infinity,
-        height: 200.0, // 設置您想要的高度
+        width: widget.width?? double.infinity,
+        height: widget.height?? 200.0, // 設置您想要的高度
         decoration: BoxDecoration(
           border: Border.all(color: Colors.grey),
           borderRadius: BorderRadius.circular(8.0),
