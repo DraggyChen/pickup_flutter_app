@@ -21,6 +21,14 @@ class _PersonalDataState extends State<PersonalData> {
 
   /* 性別 */
   String? _selectedGender;
+  static const String men = "男";
+  static const String women = "女";
+
+  /* 學校 */
+  String? _selectedUniversity;
+  static const String uni_CGU = "長庚大學CGU";
+  static const String uni_CGUST = "長庚科技大學CGUST";
+  static const String uni_NTSU = "體育大學NTSU";
 
   @override
   Widget build(BuildContext context) {
@@ -65,24 +73,22 @@ class _PersonalDataState extends State<PersonalData> {
             Row(
               children: [
                 Expanded(
-                    child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: ListTile(
-                      title: const Text("男"),
-                      leading: Radio<String>(
-                          value: '男',
-                          groupValue: _selectedGender,
-                          onChanged: (String? value) {
-                            setState(() {
-                              _selectedGender = value;
-                            });
-                          })),
+                    child: ListTile(
+                  title: const Text(men),
+                  leading: Radio<String>(
+                      value: men,
+                      groupValue: _selectedGender,
+                      onChanged: (String? value) {
+                        setState(() {
+                          _selectedGender = value;
+                        });
+                      }),
                 )),
                 Expanded(
                   child: ListTile(
-                      title: const Text("女"),
+                      title: const Text(women),
                       leading: Radio<String>(
-                        value: "女",
+                        value: women,
                         groupValue: _selectedGender,
                         onChanged: (String? value) {
                           setState(() {
@@ -93,6 +99,55 @@ class _PersonalDataState extends State<PersonalData> {
                 )
               ],
             ),
+
+            /* 學校選擇 */
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text("學校"),
+            ),
+            Row(
+              children: [
+                Radio<String>(
+                  value: uni_CGU,
+                  groupValue: _selectedUniversity,
+                  onChanged: (String? value) {
+                    setState(() {
+                      _selectedUniversity = value;
+                    });
+                  },
+                ),
+                Text(uni_CGU),
+                Radio<String>(
+                  value: uni_CGUST,
+                  groupValue: _selectedUniversity,
+                  onChanged: (String? value) {
+                    setState(() {
+                      _selectedUniversity = value;
+                    });
+                  },
+                ),
+                Text(uni_CGUST),
+              ],
+            ),
+            Row(
+              children: [
+                Radio<String>(
+                  value: uni_NTSU,
+                  groupValue: _selectedUniversity,
+                  onChanged: (String? value) {
+                    setState(() {
+                      _selectedUniversity = value;
+                    });
+                  },
+                ),
+                Text(uni_NTSU),
+              ],
+            ),
+
+            /* 學生證或教職員工作證 */
+
+
+
           ],
         ),
       ),
