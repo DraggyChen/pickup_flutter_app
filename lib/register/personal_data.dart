@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:pickup/style/styles.dart';
+import 'package:pickup/utils/ImagePickerWidget.dart';
+
 
 class PersonalData extends StatefulWidget {
   @override
@@ -29,6 +31,8 @@ class _PersonalDataState extends State<PersonalData> {
   static const String uni_CGU = "長庚大學CGU";
   static const String uni_CGUST = "長庚科技大學CGUST";
   static const String uni_NTSU = "體育大學NTSU";
+
+  /* 學生證 */
 
   @override
   Widget build(BuildContext context) {
@@ -145,7 +149,8 @@ class _PersonalDataState extends State<PersonalData> {
             ),
 
             /* 學生證或教職員工作證 */
-
+            ImagePickerWidget(hint: '學生證正面'),
+            // ImagePickerWidget(hint: '學生證反面'),
 
 
           ],
