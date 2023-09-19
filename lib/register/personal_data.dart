@@ -40,8 +40,8 @@ class _PersonalDataState extends State<PersonalData> {
         //排版處理：上方針對瀏海部分的話再往下加
           padding: EdgeInsets.only(
             top: 16.0 + MediaQuery.of(context).padding.top,
-            left: 16.0,
-            right: 16.0,
+            left: 30.0,
+            right: 30.0,
             bottom: 16.0,
           ),
           //元件內容
