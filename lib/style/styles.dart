@@ -14,4 +14,9 @@ class CustomStyles {
     color: Colors.black,
   );
 
+  static const TextStyle ButtonContentStyle = TextStyle(
+    fontSize: 16.0,
+    fontWeight: FontWeight.bold,
+    color: Colors.black,
+  );
 }

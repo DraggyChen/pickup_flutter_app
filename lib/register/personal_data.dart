@@ -37,7 +37,7 @@ class _PersonalDataState extends State<PersonalData> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        //排版處理：上方針對瀏海部分的話再往下加
+          //排版處理：上方針對瀏海部分的話再往下加
           padding: EdgeInsets.only(
             top: 16.0 + MediaQuery.of(context).padding.top,
             left: 30.0,
@@ -173,6 +173,25 @@ class _PersonalDataState extends State<PersonalData> {
                   width: 200,
                   height: 100,
                 ),
+                SizedBox(height: 20),
+
+                /* 儲存資料按鈕 */
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    "儲存資料",
+                    style: CustomStyles.ButtonContentStyle,
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    // foregroundColor: Colors.black,
+                    //R255 G249 B204
+                    backgroundColor: Color.fromRGBO(255, 249, 204, 1),
+                    fixedSize: Size(200, 70),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                )
               ],
             ),
           )),
