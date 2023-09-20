@@ -28,40 +28,84 @@ class _HomeState extends State<Home> {
           });
         },
         children: [
-          Center(child: Text('Page 1')),
-          Center(child: Text('Page 2')),
-          Center(child: Text('Home Page')),
-          Center(child: Text('Page 4')),
-          Center(child: Text('Page 5')),
+          Center(child: Text('Page 1 H')),
+          Center(child: Text('Page 2 H')),
+          Center(child: Text('Home Page H')),
+          Center(child: Text('Page 4 H')),
+          Center(child: Text('Page 5 H')),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.car_rental),
-            label: 'Page 1',
+      bottomNavigationBar: Container(
+        //上下左右間距
+        margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 16.0),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15.0),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 0.5,
+              blurRadius: 1,
+              offset: Offset(0, 1), // changes position of shadow
+            ),
+          ],
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(15.0),
+          //因為只放icon不放label 不考慮 BottomNavigationBar
+          child: BottomAppBar(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                IconButton(
+                  icon: Icon(Icons.car_rental),
+                  color: _selectedIndex == 0 ? Colors.black : Colors.grey,
+                  onPressed: () {
+                    setState(() {
+                      _selectedIndex = 0;
+                    });
+                  },
+                ),
+                IconButton(
+                  icon: Icon(Icons.bus_alert),
+                  color: _selectedIndex == 1 ? Colors.black : Colors.grey,
+                  onPressed: () {
+                    setState(() {
+                      _selectedIndex = 1;
+                    });
+                  },
+                ),
+                IconButton(
+                  icon: Icon(Icons.home),
+                  color: _selectedIndex == 2 ? Colors.black : Colors.grey,
+                  onPressed: () {
+                    setState(() {
+                      _selectedIndex = 2;
+                    });
+                  },
+                ),
+                IconButton(
+                  icon: Icon(Icons.message),
+                  color: _selectedIndex == 3 ? Colors.black : Colors.grey,
+                  onPressed: () {
+                    setState(() {
+                      _selectedIndex = 3;
+                    });
+                  },
+                ),
+                IconButton(
+                  icon: Icon(Icons.person_2),
+                  color: _selectedIndex == 4 ? Colors.black : Colors.grey,
+                  onPressed: () {
+                    setState(() {
+                      _selectedIndex = 4;
+                    });
+                  },
+                ),
+              ],
+            ),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.bus_alert),
-            label: 'Page 2',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.message),
-            label: 'Page 4',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Page 5',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        unselectedItemColor: Colors.grey,
-        onTap: _onItemTapped,
+
+        ),
       ),
     );
   }
