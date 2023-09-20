@@ -209,9 +209,8 @@ class _PersonalDataState extends State<PersonalData> {
                     style: CustomStyles.ButtonContentStyle,
                   ),
                   style: ElevatedButton.styleFrom(
-                    // foregroundColor: Colors.black,
-                    //R255 G249 B204
-                    backgroundColor: Color.fromRGBO(255, 249, 204, 1),
+                    //255, 242, 188
+                    backgroundColor: Color.fromRGBO(255, 242, 188, 1),
                     fixedSize: Size(200, 70),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
