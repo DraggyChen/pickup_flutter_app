@@ -10,6 +10,7 @@ class _HomeState extends State<Home> {
   int _selectedIndex = 2;
   PageController _pageController = PageController(initialPage: 2);
 
+  /* Bar切換頁面Method */
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -59,47 +60,27 @@ class _HomeState extends State<Home> {
                 IconButton(
                   icon: Icon(Icons.car_rental),
                   color: _selectedIndex == 0 ? Colors.black : Colors.grey,
-                  onPressed: () {
-                    setState(() {
-                      _selectedIndex = 0;
-                    });
-                  },
+                  onPressed: () =>_onItemTapped(1),
                 ),
                 IconButton(
                   icon: Icon(Icons.bus_alert),
                   color: _selectedIndex == 1 ? Colors.black : Colors.grey,
-                  onPressed: () {
-                    setState(() {
-                      _selectedIndex = 1;
-                    });
-                  },
+                  onPressed: () =>_onItemTapped(1),
                 ),
                 IconButton(
                   icon: Icon(Icons.home),
                   color: _selectedIndex == 2 ? Colors.black : Colors.grey,
-                  onPressed: () {
-                    setState(() {
-                      _selectedIndex = 2;
-                    });
-                  },
+                  onPressed: () =>_onItemTapped(2),
                 ),
                 IconButton(
                   icon: Icon(Icons.message),
                   color: _selectedIndex == 3 ? Colors.black : Colors.grey,
-                  onPressed: () {
-                    setState(() {
-                      _selectedIndex = 3;
-                    });
-                  },
+                  onPressed: () =>_onItemTapped(3),
                 ),
                 IconButton(
                   icon: Icon(Icons.person_2),
                   color: _selectedIndex == 4 ? Colors.black : Colors.grey,
-                  onPressed: () {
-                    setState(() {
-                      _selectedIndex = 4;
-                    });
-                  },
+                  onPressed: () =>_onItemTapped(4),
                 ),
               ],
             ),
