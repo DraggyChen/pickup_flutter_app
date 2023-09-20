@@ -23,9 +23,15 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(height: 1),
+              /* Settings Button */
               Align(
                 alignment: Alignment.centerRight,
-                child: IconButton(onPressed: () {}, icon: Icon(Icons.settings, size: 35,)),
+                child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.settings,
+                      size: 35,
+                    )),
               ),
 
               /* 頭貼、姓名、評分標題 */
@@ -54,6 +60,7 @@ class _HomePageState extends State<HomePage> {
                         Icon(
                           Icons.star,
                           size: 30,
+                          color: Color.fromRGBO(255, 223, 0, 1),
                         ),
                       ],
                     ),
@@ -63,7 +70,151 @@ class _HomePageState extends State<HomePage> {
                     child: SizedBox(width: 50),
                   )
                 ],
-              )
+              ),
+              SizedBox(height: 20),
+
+              /* 共乘行程 */
+              ElevatedButton(
+                style: CustomStyles.home_car,
+                onPressed: () {
+                  // 切換頁面
+                },
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Text('共乘行程', style: CustomStyles.topTitleStyle),
+                      ),
+                    ),
+                    Expanded(
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Icon(
+                          Icons.car_crash,
+                          size: 70,
+                          color: Colors.black,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(height: 20),
+
+              /* 聊天室、論壇 */
+              Row(
+                children: [
+                  Expanded(
+                      child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: ElevatedButton(
+                        style: CustomStyles.home_message,
+                        onPressed: () {},
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Spacer(),
+                                Expanded(
+                                  child: Align(
+                                    alignment: Alignment.centerRight,
+                                    child: Icon(
+                                      Icons.message_outlined,
+                                      size: 50,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                )
+                                //
+                              ],
+                            ),
+                            SizedBox(height: 40),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text('聊天室',
+                                        style: CustomStyles.topTitleStyle),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ],
+                        )),
+                  )),
+                  SizedBox(width: 20),
+                  Expanded(
+                      child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: ElevatedButton(
+                        style: CustomStyles.home_chat,
+                        onPressed: () {},
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Spacer(),
+                                Expanded(
+                                  child: Align(
+                                    alignment: Alignment.centerRight,
+                                    child: Icon(
+                                      Icons.message_outlined,
+                                      size: 50,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                )
+                                //
+                              ],
+                            ),
+                            SizedBox(height: 40),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text('論壇',
+                                        style: CustomStyles.topTitleStyle),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ],
+                        )),
+                  ))
+                ],
+              ),
+              SizedBox(height: 20),
+
+              /* 交通資訊 */
+              ElevatedButton(
+                style: CustomStyles.home_traffics,
+                onPressed: () {
+                  // 切換頁面
+                },
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Icon(
+                          Icons.bus_alert,
+                          size: 70,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Text('交通資訊', style: CustomStyles.topTitleStyle),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
