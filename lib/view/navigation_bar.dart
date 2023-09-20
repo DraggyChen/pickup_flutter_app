@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pickup/view/home_page.dart';
 
-class Home extends StatefulWidget {
+class Navigation_Bar extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _NavigationBarState createState() => _NavigationBarState();
 }
 
-class _HomeState extends State<Home> {
+class _NavigationBarState extends State<Navigation_Bar> {
   int _selectedIndex = 2;
   PageController _pageController = PageController(initialPage: 2);
 
@@ -31,7 +32,7 @@ class _HomeState extends State<Home> {
         children: [
           Center(child: Text('Page 1 H')),
           Center(child: Text('Page 2 H')),
-          Center(child: Text('Home Page H')),
+          HomePage(),
           Center(child: Text('Page 4 H')),
           Center(child: Text('Page 5 H')),
         ],
