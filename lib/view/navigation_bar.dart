@@ -30,8 +30,8 @@ class _NavigationBarState extends State<Navigation_Bar> {
           });
         },
         children: [
-          Center(child: Text('Page 1 H')),
-          Center(child: Text('Page 2 H')),
+          Center(child: Text('Page 1 ')),
+          Center(child: Text('Page 2 ')),
           HomePage(),
           Center(child: Text('Page 4 H')),
           Center(child: Text('Page 5 H')),
@@ -39,7 +39,7 @@ class _NavigationBarState extends State<Navigation_Bar> {
       ),
       bottomNavigationBar: Container(
         //上下左右間距
-        margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 16.0),
+        margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.0),
           boxShadow: [
@@ -47,7 +47,7 @@ class _NavigationBarState extends State<Navigation_Bar> {
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 0.5,
               blurRadius: 1,
-              offset: Offset(0, 1), // changes position of shadow
+              offset: Offset(0, 1),
             ),
           ],
         ),
@@ -61,32 +61,31 @@ class _NavigationBarState extends State<Navigation_Bar> {
                 IconButton(
                   icon: Icon(Icons.car_crash),
                   color: _selectedIndex == 0 ? Colors.black : Colors.grey,
-                  onPressed: () =>_onItemTapped(1),
+                  onPressed: () => _onItemTapped(0),
                 ),
                 IconButton(
                   icon: Icon(Icons.bus_alert),
                   color: _selectedIndex == 1 ? Colors.black : Colors.grey,
-                  onPressed: () =>_onItemTapped(1),
+                  onPressed: () => _onItemTapped(1),
                 ),
                 IconButton(
                   icon: Icon(Icons.home),
                   color: _selectedIndex == 2 ? Colors.black : Colors.grey,
-                  onPressed: () =>_onItemTapped(2),
+                  onPressed: () => _onItemTapped(2),
                 ),
                 IconButton(
                   icon: Icon(Icons.message),
                   color: _selectedIndex == 3 ? Colors.black : Colors.grey,
-                  onPressed: () =>_onItemTapped(3),
+                  onPressed: () => _onItemTapped(3),
                 ),
                 IconButton(
                   icon: Icon(Icons.person_2),
                   color: _selectedIndex == 4 ? Colors.black : Colors.grey,
-                  onPressed: () =>_onItemTapped(4),
+                  onPressed: () => _onItemTapped(4),
                 ),
               ],
             ),
           ),
-
         ),
       ),
     );
