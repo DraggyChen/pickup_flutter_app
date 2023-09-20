@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pickup/view/navigation_bar.dart';
 import 'login_screen.dart';
-import 'register/personal_data.dart';
+import 'view/register/personal_data.dart';
 
 void main() {
   runApp( MyApp());
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: PersonalData(),  //使用登入畫面作為入口
+      home: Home(),  //使用．．畫面作為入口
     );
   }
 
