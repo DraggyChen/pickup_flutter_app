@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:pickup/style/styles.dart';
+import 'package:pickup/utils/CircleImagePicker.dart';
 import 'package:pickup/utils/ImagePickerWidget.dart';
 
 class PersonalData extends StatefulWidget {
@@ -50,10 +51,35 @@ class _PersonalDataState extends State<PersonalData> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SizedBox(height: 20),
-                Text(
-                  "基本資料",
-                  style: CustomStyles.topTitleStyle,
+                /* 上一步按鈕、基本資料標題 */
+                Row(
+                  children: [
+                    Expanded(
+                        child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: IconButton(
+                        icon: Icon(Icons.arrow_back),
+                        onPressed: () {
+                          //返回畫面
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                    )),
+                    Expanded(
+                        child: Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        "基本資料",
+                        style: CustomStyles.topTitleStyle,
+                        textAlign: TextAlign.center,
+                      ),
+                    )),
+                    Spacer()
+                  ],
                 ),
+                SizedBox(height: 20),
+                CircleImagePicker(hint: "使用者圖片", diameter: 120),
+                SizedBox(height: 20),
                 TextField(
                   controller: _usernameController,
                   decoration: InputDecoration(
