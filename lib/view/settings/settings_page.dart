@@ -61,15 +61,18 @@ class _Settings_pageState extends State<Settings_page> {
                     alignment: Alignment.centerLeft,
                     child: CircleImagePicker(hint: "使用者圖片", diameter: 120),
                   )),
-                  SizedBox(width: 20,),
+                  SizedBox(
+                    width: 20,
+                  ),
                   Expanded(
                     child: Align(
                       alignment: Alignment.center, //將Align內全部物品置中
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start, //使Column內物品置左
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        //使Column內物品置左
                         children: [
                           Text(
-                              "Name",
+                            "Name",
                             style: CustomStyles.TitleUsernameStyle_larger,
                           ),
                           SizedBox(height: 10),
@@ -84,6 +87,32 @@ class _Settings_pageState extends State<Settings_page> {
                   Expanded(child: SizedBox(height: 20)),
                 ],
               ),
+              SizedBox(height: 20),
+              /* 性別、電話 */
+              Row(
+                children: [
+                  Expanded(
+                      child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Icon(
+                            Icons.girl,
+                            size: 50,
+                          ))),
+                  Expanded(
+                      child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                        "女性",
+                      style: TextStyle(fontSize: 15),
+                    ),
+                  )),
+                  Expanded(child: SizedBox(height: 20)),
+                  Expanded(child: SizedBox(height: 20)),
+                  Expanded(child: SizedBox(height: 20)),
+                  Expanded(child: SizedBox(height: 20)),
+                  Expanded(child: SizedBox(height: 20)),
+                ],
+              )
             ],
           ),
         ),
