@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pickup/view/settings/settings_row.dart';
 
 import '../../style/styles.dart';
 import '../../utils/CircleImagePicker.dart';
@@ -124,6 +125,7 @@ class _Settings_pageState extends State<Settings_page> {
               /* 方案、身份 */
               Row(
                 children: [
+                  //左半部
                   Expanded(
                     child: Container(
                       decoration: BoxDecoration(
@@ -151,6 +153,7 @@ class _Settings_pageState extends State<Settings_page> {
                       ),
                     ),
                   ),
+                  //右半部
                   Expanded(
                     child: Container(
                       decoration: BoxDecoration(
@@ -179,7 +182,40 @@ class _Settings_pageState extends State<Settings_page> {
                     ),
                   ),
                 ],
-              )
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              /* 基本資料、歷史行程、法務說明、客服中心 */
+              SettingsRow(
+                  iconData: Icons.person,
+                  title: "基本資料",
+                  onTap: () {
+                    //基本資料 ui
+                  }),
+              SizedBox(height: 10),
+              SettingsRow(
+                  iconData: Icons.timelapse_sharp,
+                  title: "歷史行程",
+                  onTap: () {
+                    //歷史行程 ui
+                  }),
+              SizedBox(height: 10),
+              SettingsRow(
+                  iconData: Icons.question_answer,
+                  title: "法務說明",
+                  onTap: () {
+                    //法務說明 ui
+                  }),
+              SizedBox(height: 10),
+              SettingsRow(
+                  iconData: Icons.headset_mic,
+                  title: "客服中心",
+                  onTap: () {
+                    //客服中心 ui
+                  }),
+
+
             ],
           ),
         ),
