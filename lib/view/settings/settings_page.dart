@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pickup/view/register/personal_data.dart';
 import 'package:pickup/view/settings/settings_row.dart';
 
 import '../../style/styles.dart';
@@ -29,6 +30,7 @@ class _Settings_pageState extends State<Settings_page> {
               /* 上一步按鈕，修改資料按鈕 */
               Row(
                 children: [
+                  //上一步按鈕
                   Expanded(
                       child: Align(
                     alignment: Alignment.centerLeft,
@@ -40,14 +42,17 @@ class _Settings_pageState extends State<Settings_page> {
                       },
                     ),
                   )),
+                  //修改資料
                   Expanded(
                       child: Align(
                     alignment: Alignment.centerRight,
                     child: IconButton(
                       icon: Icon(Icons.draw),
                       onPressed: () {
-                        //返回畫面
-                        Navigator.of(context).pop();
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => PersonalData()),
+                        );
                       },
                     ),
                   )),
@@ -193,29 +198,55 @@ class _Settings_pageState extends State<Settings_page> {
                   onTap: () {
                     //基本資料 ui
                   }),
-              SizedBox(height: 10),
+              SizedBox(height: 20),
               SettingsRow(
                   iconData: Icons.timelapse_sharp,
                   title: "歷史行程",
                   onTap: () {
                     //歷史行程 ui
                   }),
-              SizedBox(height: 10),
+              SizedBox(height: 20),
               SettingsRow(
                   iconData: Icons.question_answer,
                   title: "法務說明",
                   onTap: () {
                     //法務說明 ui
                   }),
-              SizedBox(height: 10),
+              SizedBox(height: 20),
               SettingsRow(
                   iconData: Icons.headset_mic,
                   title: "客服中心",
                   onTap: () {
                     //客服中心 ui
                   }),
-
-
+              SizedBox(height: 30),
+              /* 登出 */
+              Container(
+                decoration: BoxDecoration(
+                  border: Border(
+                    top: BorderSide(color: Colors.black),
+                  ),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start, // 垂直居中
+                  children: [
+                    SizedBox(height: 20),
+                    InkWell(
+                      onTap: () {},
+                      child: Row(
+                        children: [
+                          Icon(Icons.power_settings_new, size: 40, color: Colors.red),
+                          SizedBox(width: 20),
+                          Text(
+                            "登出",
+                            style: TextStyle(fontSize: 20, color: Colors.red),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

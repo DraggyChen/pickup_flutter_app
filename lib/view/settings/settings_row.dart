@@ -6,30 +6,31 @@ class SettingsRow extends StatelessWidget {
   final String title; // 用於表示文字內容
   final VoidCallback onTap; // 點擊箭頭時的回調函數
 
-  SettingsRow({required this.iconData, required this.title, required this.onTap});
+  SettingsRow(
+      {required this.iconData, required this.title, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(
-          iconData,
-          size: 40,
-        ),
-        SizedBox(width: 20),
-        Text(
-          title,
-          style: TextStyle(fontSize: 20),
-        ),
-        Spacer(),
-        IconButton(
-          onPressed: onTap,
-          icon: Icon(
+    return InkWell(
+      onTap: onTap,
+      child: Row(
+        children: [
+          Icon(
+            iconData,
+            size: 40,
+          ),
+          SizedBox(width: 20),
+          Text(
+            title,
+            style: TextStyle(fontSize: 20),
+          ),
+          Spacer(),
+          Icon(
             Icons.arrow_forward_ios,
             size: 25,
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
