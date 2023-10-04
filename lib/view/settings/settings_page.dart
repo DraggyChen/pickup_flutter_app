@@ -89,30 +89,38 @@ class _Settings_pageState extends State<Settings_page> {
               ),
               SizedBox(height: 20),
               /* 性別、電話 */
-              Row(
+              Column(
                 children: [
-                  Expanded(
-                      child: Align(
-                          alignment: Alignment.centerLeft,
-                          child: Icon(
-                            Icons.girl,
-                            size: 50,
-                          ))),
-                  Expanded(
-                      child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.girl,
+                        size: 50,
+                      ),
+                      SizedBox(width: 15),  // 使用 SizedBox 來添加距離
+                      Text(
                         "女性",
-                      style: TextStyle(fontSize: 15),
-                    ),
-                  )),
-                  Expanded(child: SizedBox(height: 20)),
-                  Expanded(child: SizedBox(height: 20)),
-                  Expanded(child: SizedBox(height: 20)),
-                  Expanded(child: SizedBox(height: 20)),
-                  Expanded(child: SizedBox(height: 20)),
+                        style: TextStyle(fontSize: 15),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10), // 調整為所需的間距
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.phone,
+                        size: 40,
+                      ),
+                      SizedBox(width: 20),  // 使用 SizedBox 來添加距離
+                      Text(
+                        "+886-9xx-xxx-xxx",
+                        style: TextStyle(fontSize: 15),
+                      ),
+                    ],
+                  ),
                 ],
               )
+
             ],
           ),
         ),
