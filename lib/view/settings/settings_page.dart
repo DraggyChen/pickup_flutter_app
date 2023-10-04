@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../style/styles.dart';
+import '../../utils/CircleImagePicker.dart';
 
 class Settings_page extends StatefulWidget {
   @override
@@ -51,7 +52,38 @@ class _Settings_pageState extends State<Settings_page> {
                   )),
                 ],
               ),
-              /*  */
+              SizedBox(height: 20),
+              /* 使用者圖片、姓名、學校 */
+              Row(
+                children: [
+                  Expanded(
+                      child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: CircleImagePicker(hint: "使用者圖片", diameter: 120),
+                  )),
+                  SizedBox(width: 20,),
+                  Expanded(
+                    child: Align(
+                      alignment: Alignment.center, //將Align內全部物品置中
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start, //使Column內物品置左
+                        children: [
+                          Text(
+                              "Name",
+                            style: CustomStyles.TitleUsernameStyle_larger,
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            "長庚大學 學生",
+                            style: CustomStyles.ButtonContentStyle,
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(child: SizedBox(height: 20)),
+                ],
+              ),
             ],
           ),
         ),

@@ -24,6 +24,11 @@ class CustomStyles {
     fontWeight: FontWeight.bold,
     color: Colors.black,
   );
+  static const TextStyle TitleUsernameStyle_larger = TextStyle(
+    fontSize: 30.0,
+    fontWeight: FontWeight.bold,
+    color: Colors.black,
+  );
 
   static ButtonStyle home_car = ElevatedButton.styleFrom(
     backgroundColor: Color.fromRGBO(255, 242, 188, 1),
