@@ -32,7 +32,8 @@ class _HomePageState extends State<HomePage> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Settings_page()),
+                        MaterialPageRoute(
+                            builder: (context) => Settings_page()),
                       );
                     },
                     icon: Icon(
@@ -44,11 +45,16 @@ class _HomePageState extends State<HomePage> {
               /* 頭貼、姓名、評分標題 */
               Row(
                 children: [
-                  Expanded(
-                      child: Align(
+                  Align(
                     alignment: Alignment.centerLeft,
                     child: CircleImagePicker(hint: "頭貼", diameter: 120),
-                  )),
+                  ),
+                  SizedBox(width: 20),
+                  // Expanded(
+                  //     child: Align(
+                  //   alignment: Alignment.centerLeft,
+                  //   child: CircleImagePicker(hint: "頭貼", diameter: 120),
+                  // )),
                   Expanded(
                       child: Align(
                     alignment: Alignment.center,
