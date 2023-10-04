@@ -97,7 +97,7 @@ class _Settings_pageState extends State<Settings_page> {
                         Icons.girl,
                         size: 50,
                       ),
-                      SizedBox(width: 15),  // 使用 SizedBox 來添加距離
+                      SizedBox(width: 15), // 使用 SizedBox 來添加距離
                       Text(
                         "女性",
                         style: TextStyle(fontSize: 15),
@@ -111,7 +111,7 @@ class _Settings_pageState extends State<Settings_page> {
                         Icons.phone,
                         size: 40,
                       ),
-                      SizedBox(width: 20),  // 使用 SizedBox 來添加距離
+                      SizedBox(width: 20), // 使用 SizedBox 來添加距離
                       Text(
                         "+886-9xx-xxx-xxx",
                         style: TextStyle(fontSize: 15),
@@ -119,8 +119,67 @@ class _Settings_pageState extends State<Settings_page> {
                     ],
                   ),
                 ],
+              ),
+              SizedBox(height: 20),
+              /* 方案、身份 */
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border(
+                          top: BorderSide(color: Colors.black),
+                          bottom: BorderSide(color: Colors.black),
+                          right: BorderSide(color: Colors.black),
+                          // 左邊不設置邊框
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center, // 垂直居中
+                        children: [
+                          SizedBox(height: 20),
+                          Text(
+                            "NT\$100.00",
+                            style: TextStyle(fontSize: 25, color: Colors.blue),
+                          ),
+                          Text(
+                            "1個月",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          SizedBox(height: 20),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border(
+                          top: BorderSide(color: Colors.black),
+                          left: BorderSide(color: Colors.black),
+                          bottom: BorderSide(color: Colors.black),
+                          // 右邊不設置邊框
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center, // 垂直居中
+                        children: [
+                          SizedBox(height: 20),
+                          Text(
+                            "目前身份",
+                            style: TextStyle(fontSize: 20, color: Colors.blue),
+                          ),
+                          Text(
+                            "駕駛",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          SizedBox(height: 20),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               )
-
             ],
           ),
         ),
