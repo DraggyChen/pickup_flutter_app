@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pickup/style/styles.dart';
 import 'package:pickup/utils/CircleImagePicker.dart';
 import 'package:pickup/view/register/personal_data.dart';
+import 'package:pickup/view/settings/settings_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -31,7 +32,7 @@ class _HomePageState extends State<HomePage> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => PersonalData()),
+                        MaterialPageRoute(builder: (context) => Settings_page()),
                       );
                     },
                     icon: Icon(

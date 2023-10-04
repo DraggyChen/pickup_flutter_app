@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pickup/view/home_page.dart';
+import 'package:pickup/view/register/personal_data.dart';
 
 class Navigation_Bar extends StatefulWidget {
   @override
@@ -31,10 +32,10 @@ class _NavigationBarState extends State<Navigation_Bar> {
         },
         children: [
           Center(child: Text('Page 1 ')),
-          Center(child: Text('Page 2 ')),
+          Center(child: Text('Page 2'),),
           HomePage(),
           Center(child: Text('Page 4 H')),
-          Center(child: Text('Page 5 H')),
+          PersonalData(),
         ],
       ),
       bottomNavigationBar: Container(
