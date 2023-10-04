@@ -1,3 +1,5 @@
+import 'dart:io'; // 用於檢測操作系統
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pickup/view/home_page.dart';
@@ -56,36 +58,41 @@ class _NavigationBarState extends State<Navigation_Bar> {
           borderRadius: BorderRadius.circular(15.0),
           //因為只放icon不放label 不考慮 BottomNavigationBar
           child: BottomAppBar(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                IconButton(
-                  icon: Icon(Icons.car_crash),
-                  color: _selectedIndex == 0 ? Colors.black : Colors.grey,
-                  onPressed: () => _onItemTapped(0),
-                ),
-                IconButton(
-                  icon: Icon(Icons.bus_alert),
-                  color: _selectedIndex == 1 ? Colors.black : Colors.grey,
-                  onPressed: () => _onItemTapped(1),
-                ),
-                IconButton(
-                  icon: Icon(Icons.home),
-                  color: _selectedIndex == 2 ? Colors.black : Colors.grey,
-                  onPressed: () => _onItemTapped(2),
-                ),
-                IconButton(
-                  icon: Icon(Icons.message),
-                  color: _selectedIndex == 3 ? Colors.black : Colors.grey,
-                  onPressed: () => _onItemTapped(3),
-                ),
-                IconButton(
-                  icon: Icon(Icons.person_2),
-                  color: _selectedIndex == 4 ? Colors.black : Colors.grey,
-                  onPressed: () => _onItemTapped(4),
-                ),
-              ],
+            elevation: 0, // 刪除陰影
+            child: Container( // 添加這個Container
+              height: Platform.isIOS ? 10 : 45, // 根據平台動態設定高度，使用import 'dart:io';
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  IconButton(
+                    icon: Icon(Icons.car_crash),
+                    color: _selectedIndex == 0 ? Colors.black : Colors.grey,
+                    onPressed: () => _onItemTapped(0),
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.bus_alert),
+                    color: _selectedIndex == 1 ? Colors.black : Colors.grey,
+                    onPressed: () => _onItemTapped(1),
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.home),
+                    color: _selectedIndex == 2 ? Colors.black : Colors.grey,
+                    onPressed: () => _onItemTapped(2),
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.message),
+                    color: _selectedIndex == 3 ? Colors.black : Colors.grey,
+                    onPressed: () => _onItemTapped(3),
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.person_2),
+                    color: _selectedIndex == 4 ? Colors.black : Colors.grey,
+                    onPressed: () => _onItemTapped(4),
+                  ),
+                ],
+              ),
             ),
+
           ),
         ),
       ),
