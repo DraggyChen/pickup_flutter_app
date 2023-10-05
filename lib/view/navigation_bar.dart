@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pickup/view/home_page.dart';
 import 'package:pickup/view/register/personal_data.dart';
+import 'package:pickup/view/trafficInfo/trafficInfo.dart';
 
 class Navigation_Bar extends StatefulWidget {
   @override
@@ -25,6 +26,8 @@ class _NavigationBarState extends State<Navigation_Bar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: _selectedIndex == 0 ? const Color(0xffffffeaed): Colors.white, // 根據當前選中的頁面索引來設定背景色
+
       body: PageView(
         controller: _pageController,
         onPageChanged: (index) {
@@ -33,7 +36,7 @@ class _NavigationBarState extends State<Navigation_Bar> {
           });
         },
         children: [
-          Center(child: Text('Page 1 ')),
+          TrafficInfo(),
           Center(child: Text('Page 2'),),
           HomePage(),
           Center(child: Text('Page 4 H')),
@@ -44,6 +47,7 @@ class _NavigationBarState extends State<Navigation_Bar> {
         //上下左右間距
         margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
         decoration: BoxDecoration(
+
           borderRadius: BorderRadius.circular(15.0),
           boxShadow: [
             BoxShadow(
@@ -58,6 +62,7 @@ class _NavigationBarState extends State<Navigation_Bar> {
           borderRadius: BorderRadius.circular(15.0),
           //因為只放icon不放label 不考慮 BottomNavigationBar
           child: BottomAppBar(
+
             elevation: 0, // 刪除陰影
             child: Container( // 添加這個Container
               height: Platform.isIOS ? 10 : 45, // 根據平台動態設定高度，使用import 'dart:io';
