@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:pickup/view/trafficInfo/TrafficStyles.dart';
 
 class BlockInfoButton extends StatelessWidget {
-  final IconData icon;
+  final String imagePath;
   final String text;
   final VoidCallback onPressed;
 
   BlockInfoButton(
-      {required this.icon, required this.text, required this.onPressed});
+      {required this.imagePath, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class BlockInfoButton extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(icon, color: Colors.black, size: 50,),
+                Image.asset(imagePath, width: 100, height: 100,), // 使用Image.asset代替Icon
                 SizedBox(height: 20),
                 Text(
                   text,

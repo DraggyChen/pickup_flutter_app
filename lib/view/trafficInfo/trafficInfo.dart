@@ -43,7 +43,7 @@ class _TrafficInfoState extends State<TrafficInfo> {
                 children: [
                   Expanded(
                       child: BlockInfoButton(
-                    icon: Icons.bus_alert_rounded,
+                    imagePath: 'assets/images/trafficinfo/School_Bus.png',
                     text: "校車班次表",
                     onPressed: () {
                       //校車班次表UI
@@ -54,9 +54,9 @@ class _TrafficInfoState extends State<TrafficInfo> {
                   ),
                   Expanded(
                     child: BlockInfoButton(
-                      icon: Icons.bus_alert,
+                      imagePath: 'assets/images/trafficinfo/Shuttle_Bus.png',
                       text: "接駁車班次表",
-                      onPressed: (){
+                      onPressed: () {
                         //接駁車班次表UI
                       },
                     ),
@@ -67,24 +67,27 @@ class _TrafficInfoState extends State<TrafficInfo> {
               /* 公車時刻表 */
               Row(
                 children: [
-                  Expanded(child: BlockInfoButton(
-                    icon: Icons.bus_alert_outlined,
+                  Expanded(
+                      child: BlockInfoButton(
+                    imagePath: 'assets/images/trafficinfo/Bus.png',
                     text: "公車時刻表",
-                    onPressed: (){
+                    onPressed: () {
                       //公車時刻表 UI
                     },
                   )),
-                  SizedBox(width: 20,),
-                  Expanded(child: BlockInfoButton(
-                    icon: Icons.directions_subway,
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Expanded(
+                      child: BlockInfoButton(
+                    imagePath: 'assets/images/trafficinfo/Airport_Tube.png',
                     text: "機捷時刻表",
-                    onPressed: (){
+                    onPressed: () {
                       //公車時刻表 UI
                     },
                   ))
                 ],
               )
-
             ],
           ),
         ),
