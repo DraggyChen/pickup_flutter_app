@@ -3,6 +3,7 @@ import 'dart:io'; // 用於檢測操作系統
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pickup/view/home_page.dart';
+import 'package:pickup/view/navigation/navigation_button.dart';
 import 'package:pickup/view/register/personal_data.dart';
 import 'package:pickup/view/trafficInfo/trafficInfo.dart';
 
@@ -69,31 +70,44 @@ class _NavigationBarState extends State<Navigation_Bar> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.car_crash),
-                    color: _selectedIndex == 0 ? Colors.black : Colors.grey,
-                    onPressed: () => _onItemTapped(0),
+                  NavigationButton(
+                    imagePath: 'assets/images/navbar/car.png',
+                    imagePathSelected:  'assets/images/navbar/car_selected.png',
+                    onPressed: ()=> _onItemTapped(0),
+                    isSelected: _selectedIndex == 0, // Check here
                   ),
-                  IconButton(
-                    icon: Icon(Icons.bus_alert),
-                    color: _selectedIndex == 1 ? Colors.black : Colors.grey,
-                    onPressed: () => _onItemTapped(1),
+
+                  NavigationButton(
+                    imagePath: 'assets/images/navbar/TrafficInfo.png',
+                    imagePathSelected:  'assets/images/navbar/TrafficInfo.png',
+                    onPressed: ()=> _onItemTapped(1),
+                    isSelected: _selectedIndex == 1, // Check here
                   ),
-                  IconButton(
-                    icon: Icon(Icons.home),
-                    color: _selectedIndex == 2 ? Colors.black : Colors.grey,
-                    onPressed: () => _onItemTapped(2),
+
+                  NavigationButton(
+                    imagePath: 'assets/images/navbar/Home.png',
+                    imagePathSelected:  'assets/images/navbar/Home_selected.png',
+                    onPressed: ()=> _onItemTapped(2),
+                    isSelected: _selectedIndex == 2, // Check here
                   ),
-                  IconButton(
-                    icon: Icon(Icons.message),
-                    color: _selectedIndex == 3 ? Colors.black : Colors.grey,
-                    onPressed: () => _onItemTapped(3),
+                  NavigationButton(
+                    imagePath: 'assets/images/navbar/Message.png',
+                    imagePathSelected:  'assets/images/navbar/Message.png',
+                    onPressed: ()=> _onItemTapped(3),
+                    isSelected: _selectedIndex == 3, // Check here
                   ),
-                  IconButton(
-                    icon: Icon(Icons.person_2),
-                    color: _selectedIndex == 4 ? Colors.black : Colors.grey,
-                    onPressed: () => _onItemTapped(4),
+
+                  NavigationButton(
+                    imagePath: 'assets/images/navbar/StudentChat.png',
+                    imagePathSelected:  'assets/images/navbar/StudentChat.png',
+                    onPressed: ()=> _onItemTapped(4),
+                    isSelected: _selectedIndex == 4, // Check here
                   ),
+                  // IconButton(
+                  //   icon: Icon(Icons.person_2),
+                  //   color: _selectedIndex == 4 ? Colors.black : Colors.grey,
+                  //   onPressed: () => _onItemTapped(4),
+                  // ),
                 ],
               ),
             ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pickup/view/navigation_bar.dart';
+import 'package:pickup/view/navigation/navigation_bar.dart';
 import 'login_screen.dart';
 import 'view/register/personal_data.dart';
-import 'view/navigation_bar.dart';
+import 'view/navigation/navigation_bar.dart';
 
 void main() {
   runApp( MyApp());
