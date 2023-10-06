@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pickup/style/styles.dart';
 import 'package:pickup/utils/CircleImagePicker.dart';
+import 'package:pickup/view/home/HomeStyles.dart';
+import 'package:pickup/view/home/RowBlockInfo.dart';
 import 'package:pickup/view/register/personal_data.dart';
 import 'package:pickup/view/settings/settings_page.dart';
 
@@ -87,32 +89,14 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: 20),
 
               /* 共乘行程 */
-              ElevatedButton(
-                style: CustomStyles.home_car,
-                onPressed: () {
-                  // 切換頁面
-                },
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Align(
-                        alignment: Alignment.center,
-                        child: Text('共乘行程', style: CustomStyles.topTitleStyle),
-                      ),
-                    ),
-                    Expanded(
-                      child: Align(
-                        alignment: Alignment.center,
-                        child: Icon(
-                          Icons.car_crash,
-                          size: 70,
-                          color: Colors.black,
-                        ),
-                      ),
-                    )
-                  ],
-                ),
+              RowBlockInfo(
+                onPressed: () {},
+                buttonText: "共乘行程",
+                imagePath: 'assets/images/home/car.png',
+                style: HomeStyles.car,
+                isReverse: false,
               ),
+
               SizedBox(height: 20),
 
               /* 聊天室、論壇 */
@@ -202,32 +186,39 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: 20),
 
               /* 交通資訊 */
-              ElevatedButton(
-                style: CustomStyles.home_traffics,
-                onPressed: () {
-                  // 切換頁面
-                },
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Align(
-                        alignment: Alignment.center,
-                        child: Icon(
-                          Icons.bus_alert,
-                          size: 70,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Align(
-                        alignment: Alignment.center,
-                        child: Text('交通資訊', style: CustomStyles.topTitleStyle),
-                      ),
-                    ),
-                  ],
-                ),
+              RowBlockInfo(
+                onPressed: () {},
+                buttonText: "交通資訊",
+                imagePath: 'assets/images/home/TrafficInfo.png',
+                style: HomeStyles.traffics,
+                isReverse: true,
               ),
+              // ElevatedButton(
+              //   style: CustomStyles.home_traffics,
+              //   onPressed: () {
+              //     // 切換頁面
+              //   },
+              //   child: Row(
+              //     children: [
+              //       Expanded(
+              //         child: Align(
+              //           alignment: Alignment.center,
+              //           child: Icon(
+              //             Icons.bus_alert,
+              //             size: 70,
+              //             color: Colors.black,
+              //           ),
+              //         ),
+              //       ),
+              //       Expanded(
+              //         child: Align(
+              //           alignment: Alignment.center,
+              //           child: Text('交通資訊', style: CustomStyles.topTitleStyle),
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
             ],
           ),
         ),
