@@ -2,6 +2,7 @@ import 'dart:io'; // 用於檢測操作系統
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pickup/main.dart';
 import 'package:pickup/view/home/home_page.dart';
 import 'package:pickup/view/navigation/navigation_button.dart';
 import 'package:pickup/view/register/personal_data.dart';
@@ -39,6 +40,7 @@ class _NavigationBarState extends State<Navigation_Bar> {
         children: [
           TrafficInfo(),
           Center(child: Text('Page 2'),),
+          // MyApp(),
           HomePage(),
           Center(child: Text('Page 4 H')),
           PersonalData(),
