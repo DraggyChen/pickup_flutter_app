@@ -52,7 +52,10 @@ class _ForumHomeState extends State<ForumHome> {
                     child: Column(
                       children: [
                         /* 篩選標籤 */
-                        ForumCategories(items: ["全部", "美食", "活動", "學校資訊"],),
+                        Container(// 或任何你想要的高度
+                          child: ForumCategories(items: ["全部", "美食", "活動", "學校資訊"]),
+                        ),
+
                       ],
                     ),
                   ),
