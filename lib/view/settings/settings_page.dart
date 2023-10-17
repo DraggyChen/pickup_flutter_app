@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pickup/view/register/personal_data.dart';
 import 'package:pickup/view/settings/settings_IconWithText.dart';
-import 'package:pickup/view/settings/settings_row.dart';
+import 'package:pickup/view/settings/settings_rowBtn.dart';
 
 import '../../style/styles.dart';
 import '../../utils/CircleImagePicker.dart';
@@ -135,13 +135,14 @@ class _Settings_pageState extends State<Settings_page> {
                           SizedBox(height: 20),
                           Text(
                             "NT\$100.00",
-                            style: TextStyle(fontSize: 25, color: Colors.blue),
+                            style: TextStyle(fontSize: 25, color: Color(0xFF0D47A1)),
                           ),
                           Text(
                             "1個月",
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 20, color: Color(0xFF0D47A1)),
                           ),
                           SizedBox(height: 20),
+
                         ],
                       ),
                     ),
@@ -163,11 +164,11 @@ class _Settings_pageState extends State<Settings_page> {
                           SizedBox(height: 20),
                           Text(
                             "目前身份",
-                            style: TextStyle(fontSize: 20, color: Colors.blue),
+                            style: TextStyle(fontSize: 20, color: Color(0xFF0D47A1)),
                           ),
                           Text(
                             "駕駛",
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 20, color: Color(0xFF0D47A1)),
                           ),
                           SizedBox(height: 20),
                         ],
