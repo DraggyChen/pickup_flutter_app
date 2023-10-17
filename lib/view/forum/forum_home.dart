@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pickup/view/forum/forum_categories.dart';
+import 'package:pickup/view/forum/forum_posts.dart';
 import 'package:pickup/view/forum/forum_topbar.dart';
 import 'package:pickup/view/trafficInfo/BlockInfo.dart';
 import 'package:pickup/view/trafficInfo/TrafficStyles.dart';
@@ -16,7 +17,7 @@ class _ForumHomeState extends State<ForumHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0XFFE3F2FD), // 深藍色
+      backgroundColor: const Color(0XFFE3F2FD), // 更淡的藍色
       body: Stack(
         children: [
           /* 先設置上方固定bar的藍色區域 */
@@ -26,7 +27,7 @@ class _ForumHomeState extends State<ForumHome> {
             right: 0,
             bottom: MediaQuery.of(context).size.height / 1.32,
             child: Container(
-              color: const Color(0XFFB3E5FC),
+              color: const Color(0XFFB3E5FC), //淡藍色
             ),
           ),
           /* 主體 */
@@ -42,7 +43,7 @@ class _ForumHomeState extends State<ForumHome> {
                 ForumTopBar(title: '學生論壇'),
                 /* 主體可滑動區域 */
                 Container(
-                  color: const Color(0XFFB3E5FC),
+                  color: const Color(0XFFB3E5FC), //淡藍色
                   child: SizedBox(
                     height: 16,
                   ), // 這里給予相同的背景顏色
@@ -51,11 +52,29 @@ class _ForumHomeState extends State<ForumHome> {
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
-                        /* 篩選標籤 */
-                        Container(// 或任何你想要的高度
-                          child: ForumCategories(items: ["全部", "美食", "活動", "學校資訊"]),
+                        /* 貼文類別篩選按鈕 */
+                        SizedBox(
+                          height: 8,
                         ),
-
+                        ForumCategories(items: ["全部", "美食", "活動", "學校資訊"]),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        /* 貼文 */
+                        ForumPosts(
+                          name: '李小明',
+                          content: "This is an example content for the post...",
+                        ),
+                        SizedBox(height: 20,),
+                        ForumPosts(
+                          name: '王大美',
+                          content: "This is an example content for the post...",
+                        ),
+                        SizedBox(height: 20,),
+                        ForumPosts(
+                          name: 'Draggy',
+                          content: "This is an example content for the post...",
+                        ),
                       ],
                     ),
                   ),

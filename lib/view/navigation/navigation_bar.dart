@@ -25,11 +25,15 @@ class _NavigationBarState extends State<Navigation_Bar> {
       _pageController.jumpToPage(index);
     });
   }
-
+ //0XFFB3E5FC
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: _selectedIndex == 0 ? const Color(0xffffffeaed): Colors.white, // 根據當前選中的頁面索引來設定背景色
+      backgroundColor: _selectedIndex == 0
+          ? const Color(0xffffffeaed)
+          : _selectedIndex == 4
+          ? const Color(0XFFE3F2FD)
+          : Colors.white, // 根據當前選中的頁面索引來設定背景色
 
       body: PageView(
         controller: _pageController,
