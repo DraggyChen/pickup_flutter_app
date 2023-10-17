@@ -15,23 +15,21 @@ class RowBlockInfo_small extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(maxWidth: 250), // 調整這個值以獲得最佳效果
+      constraints: BoxConstraints(maxWidth: 250), // 調整這個值以獲得最佳效果，防止Row的Expanded中的Align無用
       child: ElevatedButton(
         style: buttonStyle,
         onPressed: () {},
-        child: Column(
+        child: Stack(
           children: [
-            Row(
-              children: [
-                Spacer(),
-                Image.asset(imagePath, width: 100, height: 100, color: Colors.black),
-              ],
+            Positioned(
+              top: 0,
+              right: -10,  // 這會將圖片放到右邊
+              child: Image.asset(imagePath, width: 100, height: 100, color: Colors.black),
             ),
-            // SizedBox(height: 40),
-            Row(
-              children: [
-                Text(text, style: CustomStyles.topTitleStyle),
-              ],
+            Positioned(
+              bottom: 10, // 這會將文字放到底部
+              left: 0,   // 這會將文字放到左邊
+              child: Text(text, style: CustomStyles.topTitleStyle),
             ),
           ],
         ),
