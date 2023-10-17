@@ -2,12 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SettingsRow extends StatelessWidget {
-  final IconData iconData; // 用於表示圖標
-  final String title; // 用於表示文字內容
-  final VoidCallback onTap; // 點擊箭頭時的回調函數
+  final String imagePath;
+  final String title; //
+  final VoidCallback onTap; //
 
-  SettingsRow(
-      {required this.iconData, required this.title, required this.onTap});
+  SettingsRow({required this.imagePath, required this.title, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +14,7 @@ class SettingsRow extends StatelessWidget {
       onTap: onTap,
       child: Row(
         children: [
-          Icon(
-            iconData,
-            size: 40,
-          ),
+          Image.asset(imagePath, width: 40, height: 40),  //
           SizedBox(width: 20),
           Text(
             title,

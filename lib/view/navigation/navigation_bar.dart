@@ -39,7 +39,7 @@ class _NavigationBarState extends State<Navigation_Bar> {
         },
         children: [
           TrafficInfo(),
-          Center(child: Text('Page 2'),),
+          TrafficInfo(),
           // MyApp(),
           HomePage(),
           Center(child: Text('Page 4 H')),
@@ -101,15 +101,10 @@ class _NavigationBarState extends State<Navigation_Bar> {
 
                   NavigationButton(
                     imagePath: 'assets/images/navbar/StudentChat.png',
-                    imagePathSelected:  'assets/images/navbar/StudentChat.png',
+                    imagePathSelected:  'assets/images/navbar/StudentChat_selected.png',
                     onPressed: ()=> _onItemTapped(4),
                     isSelected: _selectedIndex == 4, // Check here
                   ),
-                  // IconButton(
-                  //   icon: Icon(Icons.person_2),
-                  //   color: _selectedIndex == 4 ? Colors.black : Colors.grey,
-                  //   onPressed: () => _onItemTapped(4),
-                  // ),
                 ],
               ),
             ),

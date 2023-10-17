@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pickup/view/register/personal_data.dart';
+import 'package:pickup/view/settings/settings_IconWithText.dart';
 import 'package:pickup/view/settings/settings_row.dart';
 
 import '../../style/styles.dart';
@@ -97,35 +98,22 @@ class _Settings_pageState extends State<Settings_page> {
               /* 性別、電話 */
               Column(
                 children: [
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.girl,
-                        size: 50,
-                      ),
-                      SizedBox(width: 15), // 使用 SizedBox 來添加距離
-                      Text(
-                        "女性",
-                        style: TextStyle(fontSize: 15),
-                      ),
-                    ],
+                  IconWithText(
+                    imagePath: 'assets/images/settings/Gender_women.png',
+                    text: '女性',
+                    imageHeight: 45,
+                    imageWidth: 45,
                   ),
-                  SizedBox(height: 10), // 調整為所需的間距
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.phone,
-                        size: 40,
-                      ),
-                      SizedBox(width: 20), // 使用 SizedBox 來添加距離
-                      Text(
-                        "+886-9xx-xxx-xxx",
-                        style: TextStyle(fontSize: 15),
-                      ),
-                    ],
+                  SizedBox(height: 10),
+                  IconWithText(
+                    imagePath: 'assets/images/settings/Telephone.png',
+                    text: '+886-9xx-xxx-xxx',
+                    imageHeight: 25,
+                    imageWidth: 25,
                   ),
                 ],
               ),
+
               SizedBox(height: 20),
               /* 方案、身份 */
               Row(
@@ -193,28 +181,28 @@ class _Settings_pageState extends State<Settings_page> {
               ),
               /* 基本資料、歷史行程、法務說明、客服中心 */
               SettingsRow(
-                  iconData: Icons.person,
+                  imagePath: 'assets/images/settings/PersonalData.png',
                   title: "基本資料",
                   onTap: () {
                     //基本資料 ui
                   }),
               SizedBox(height: 20),
               SettingsRow(
-                  iconData: Icons.timelapse_sharp,
+                  imagePath: 'assets/images/settings/History.png',
                   title: "歷史行程",
                   onTap: () {
                     //歷史行程 ui
                   }),
               SizedBox(height: 20),
               SettingsRow(
-                  iconData: Icons.question_answer,
+                  imagePath: 'assets/images/settings/LawDescription.png',
                   title: "法務說明",
                   onTap: () {
                     //法務說明 ui
                   }),
               SizedBox(height: 20),
               SettingsRow(
-                  iconData: Icons.headset_mic,
+                  imagePath: 'assets/images/settings/ClientCentre.png',
                   title: "客服中心",
                   onTap: () {
                     //客服中心 ui

@@ -61,6 +61,7 @@ flutter:
     - assets/images/navbar/
     - assets/images/trafficinfo/
     - assets/images/home/
+    - assets/images/settings/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
