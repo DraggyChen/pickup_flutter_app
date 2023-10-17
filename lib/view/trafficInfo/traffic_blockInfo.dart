@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pickup/view/trafficInfo/TrafficStyles.dart';
+import 'package:pickup/view/trafficInfo/traffic_styles.dart';
 
 class BlockInfoButton extends StatelessWidget {
   final String imagePath;

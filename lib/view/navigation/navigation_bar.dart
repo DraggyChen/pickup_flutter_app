@@ -7,7 +7,7 @@ import 'package:pickup/view/forum/forum_home.dart';
 import 'package:pickup/view/home/home_page.dart';
 import 'package:pickup/view/navigation/navigation_button.dart';
 import 'package:pickup/view/register/personal_data.dart';
-import 'package:pickup/view/trafficInfo/trafficInfo.dart';
+import 'package:pickup/view/trafficInfo/traffic_home.dart';
 
 class Navigation_Bar extends StatefulWidget {
   @override
@@ -29,7 +29,7 @@ class _NavigationBarState extends State<Navigation_Bar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: _selectedIndex == 0
+      backgroundColor: _selectedIndex == 1
           ? const Color(0xffffffeaed)
           : _selectedIndex == 4
           ? const Color(0XFFE3F2FD)
@@ -86,7 +86,7 @@ class _NavigationBarState extends State<Navigation_Bar> {
 
                   NavigationButton(
                     imagePath: 'assets/images/navbar/TrafficInfo.png',
-                    imagePathSelected:  'assets/images/navbar/TrafficInfo.png',
+                    imagePathSelected:  'assets/images/navbar/TrafficInfo_selected.png',
                     onPressed: ()=> _onItemTapped(1),
                     isSelected: _selectedIndex == 1, // Check here
                   ),

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:pickup/view/forum/forum_categories.dart';
 import 'package:pickup/view/forum/forum_posts.dart';
 import 'package:pickup/view/forum/forum_topbar.dart';
-import 'package:pickup/view/trafficInfo/BlockInfo.dart';
-import 'package:pickup/view/trafficInfo/TrafficStyles.dart';
+import 'package:pickup/view/trafficInfo/traffic_blockInfo.dart';
+import 'package:pickup/view/trafficInfo/traffic_styles.dart';
 
 import '../../style/styles.dart';
 

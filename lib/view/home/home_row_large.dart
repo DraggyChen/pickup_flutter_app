@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'HomeStyles.dart';
+import 'home_styles.dart';
 
 class RowBlockInfo extends StatelessWidget {
   final VoidCallback onPressed;

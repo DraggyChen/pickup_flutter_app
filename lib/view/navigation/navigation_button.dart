@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pickup/view/navigation/navigationStyles.dart';
+import 'package:pickup/view/navigation/navigation_styles.dart';
 
 class NavigationButton extends StatelessWidget {
   final String imagePath;
