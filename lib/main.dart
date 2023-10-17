@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // home: Navigation_Bar(),  //使用．．畫面作為入口
-        home: TestApp(),  //使用．．畫面作為入口
+      home: Navigation_Bar(),  //
+      //   home: TestApp(),  //測試地圖畫面作為入口
 
     );
   }

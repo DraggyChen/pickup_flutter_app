@@ -19,8 +19,8 @@ class RowBlockInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 400,  // 請根據您的需求設定
-      height: 160, // 請根據您的需求設定
+      width: 400,
+      height: 160,
       child: ElevatedButton(
         style: style,
         onPressed: onPressed,

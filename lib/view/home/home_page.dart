@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:pickup/style/styles.dart';
 import 'package:pickup/utils/CircleImagePicker.dart';
 import 'package:pickup/view/home/HomeStyles.dart';
-import 'package:pickup/view/home/RowBlockInfo.dart';
+import 'package:pickup/view/home/RowBlockInfo_large.dart';
 import 'package:pickup/view/register/personal_data.dart';
 import 'package:pickup/view/settings/settings_page.dart';
+
+import 'RowBlockInfo_small.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -103,86 +105,115 @@ class _HomePageState extends State<HomePage> {
               Row(
                 children: [
                   Expanded(
-                      child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: ElevatedButton(
-                        style: CustomStyles.home_message,
-                        onPressed: () {},
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Spacer(),
-                                Expanded(
-                                  child: Align(
-                                    alignment: Alignment.centerRight,
-                                    child: Icon(
-                                      Icons.message_outlined,
-                                      size: 50,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                )
-                                //
-                              ],
-                            ),
-                            SizedBox(height: 40),
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text('聊天室',
-                                        style: CustomStyles.topTitleStyle),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ],
-                        )),
-                  )),
-                  SizedBox(width: 20),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child:  RowBlockInfo_small(
+                        text: '聊天室',
+                        buttonStyle: CustomStyles.home_chat,
+                        imagePath: 'assets/images/home/chat.png',
+                      ),
+                    )
+                  ),
                   Expanded(
-                      child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: ElevatedButton(
-                        style: CustomStyles.home_chat,
-                        onPressed: () {},
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Spacer(),
-                                Expanded(
-                                  child: Align(
-                                    alignment: Alignment.centerRight,
-                                    child: Icon(
-                                      Icons.message_outlined,
-                                      size: 50,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                )
-                                //
-                              ],
-                            ),
-                            SizedBox(height: 40),
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text('論壇',
-                                        style: CustomStyles.topTitleStyle),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ],
-                        )),
-                  ))
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: RowBlockInfo_small(
+                        text: '論壇',
+                        buttonStyle: CustomStyles.home_forum,
+                        imagePath:
+                        'assets/images/home/forum.png',
+                      ),
+                    )
+                  )
                 ],
               ),
+
+              // Row(
+              //   children: [
+              //
+              //
+              //     Expanded(
+              //         child: Align(
+              //       alignment: Alignment.centerLeft,
+              //       child: ElevatedButton(
+              //           style: CustomStyles.home_message,
+              //           onPressed: () {},
+              //           child: Column(
+              //             children: [
+              //               Row(
+              //                 children: [
+              //                   Spacer(),
+              //                   Expanded(
+              //                     child: Align(
+              //                       alignment: Alignment.centerRight,
+              //                       child: Icon(
+              //                         Icons.message_outlined,
+              //                         size: 50,
+              //                         color: Colors.black,
+              //                       ),
+              //                     ),
+              //                   )
+              //                   //
+              //                 ],
+              //               ),
+              //               SizedBox(height: 40),
+              //               Row(
+              //                 children: [
+              //                   Expanded(
+              //                     child: Align(
+              //                       alignment: Alignment.centerLeft,
+              //                       child: Text('聊天室',
+              //                           style: CustomStyles.topTitleStyle),
+              //                     ),
+              //                   )
+              //                 ],
+              //               ),
+              //             ],
+              //           )),
+              //     )),
+              //
+              //     SizedBox(width: 20),
+              //     Expanded(
+              //         child: Align(
+              //       alignment: Alignment.centerLeft,
+              //       child: ElevatedButton(
+              //           style: CustomStyles.home_chat,
+              //           onPressed: () {},
+              //           child: Column(
+              //             children: [
+              //               Row(
+              //                 children: [
+              //                   Spacer(),
+              //                   Expanded(
+              //                     child: Align(
+              //                       alignment: Alignment.centerRight,
+              //                       child: Icon(
+              //                         Icons.message_outlined,
+              //                         size: 50,
+              //                         color: Colors.black,
+              //                       ),
+              //                     ),
+              //                   )
+              //                   //
+              //                 ],
+              //               ),
+              //               SizedBox(height: 40),
+              //               Row(
+              //                 children: [
+              //                   Expanded(
+              //                     child: Align(
+              //                       alignment: Alignment.centerLeft,
+              //                       child: Text('論壇',
+              //                           style: CustomStyles.topTitleStyle),
+              //                     ),
+              //                   )
+              //                 ],
+              //               ),
+              //             ],
+              //           )),
+              //     ))
+              //   ],
+              // ),
               SizedBox(height: 20),
 
               /* 交通資訊 */
@@ -193,32 +224,6 @@ class _HomePageState extends State<HomePage> {
                 style: HomeStyles.traffics,
                 isReverse: true,
               ),
-              // ElevatedButton(
-              //   style: CustomStyles.home_traffics,
-              //   onPressed: () {
-              //     // 切換頁面
-              //   },
-              //   child: Row(
-              //     children: [
-              //       Expanded(
-              //         child: Align(
-              //           alignment: Alignment.center,
-              //           child: Icon(
-              //             Icons.bus_alert,
-              //             size: 70,
-              //             color: Colors.black,
-              //           ),
-              //         ),
-              //       ),
-              //       Expanded(
-              //         child: Align(
-              //           alignment: Alignment.center,
-              //           child: Text('交通資訊', style: CustomStyles.topTitleStyle),
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
             ],
           ),
         ),

@@ -37,16 +37,18 @@ class CustomStyles {
       borderRadius: BorderRadius.circular(15),
     ),
   );
-  static ButtonStyle home_message = ElevatedButton.styleFrom(
+  //聊天室
+  static ButtonStyle home_chat = ElevatedButton.styleFrom(
     backgroundColor: Color.fromRGBO(144, 238, 144, 1),
-    fixedSize: Size(170, 150),
+    fixedSize: Size(180, 170),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(15),
     ),
   );
-  static ButtonStyle home_chat = ElevatedButton.styleFrom(
+  //論壇
+  static ButtonStyle home_forum = ElevatedButton.styleFrom(
     backgroundColor: Color.fromRGBO(173, 216, 230, 1),
-    fixedSize: Size(170, 150),
+    fixedSize: Size(180, 170),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(15),
     ),
