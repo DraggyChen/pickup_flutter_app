@@ -27,15 +27,20 @@ class _NavigationBarState extends State<Navigation_Bar> {
       _pageController.jumpToPage(index);
     });
   }
- //0XFFB3E5FC
+
+  //0XFFB3E5FC
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // 根據當前選中的頁面索引來設定背景色
       backgroundColor: _selectedIndex == 1
           ? const Color(0xffffffeaed)
           : _selectedIndex == 4
-          ? const Color(0XFFE3F2FD)
-          : Colors.white, // 根據當前選中的頁面索引來設定背景色
+              ? const Color(0XFFE3F2FD)
+              : _selectedIndex == 0
+                  ? Colors.amber.shade50
+                  : Colors.white,
+
 
       body: PageView(
         controller: _pageController,
@@ -57,7 +62,6 @@ class _NavigationBarState extends State<Navigation_Bar> {
         //上下左右間距
         margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
         decoration: BoxDecoration(
-
           borderRadius: BorderRadius.circular(15.0),
           boxShadow: [
             BoxShadow(
@@ -72,50 +76,49 @@ class _NavigationBarState extends State<Navigation_Bar> {
           borderRadius: BorderRadius.circular(15.0),
           //因為只放icon不放label 不考慮 BottomNavigationBar
           child: BottomAppBar(
-
             elevation: 0, // 刪除陰影
-            child: Container( // 添加這個Container
-              height: Platform.isIOS ? 40 : 45, // 根據平台動態設定高度，使用import 'dart:io';
+            child: Container(
+              // 添加這個Container
+              height: Platform.isIOS ? 40 : 45,
+              // 根據平台動態設定高度，使用import 'dart:io';
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   NavigationButton(
                     imagePath: 'assets/images/navbar/car.png',
-                    imagePathSelected:  'assets/images/navbar/car_selected.png',
-                    onPressed: ()=> _onItemTapped(0),
+                    imagePathSelected: 'assets/images/navbar/car_selected.png',
+                    onPressed: () => _onItemTapped(0),
                     isSelected: _selectedIndex == 0, // Check here
                   ),
-
                   NavigationButton(
                     imagePath: 'assets/images/navbar/TrafficInfo.png',
-                    imagePathSelected:  'assets/images/navbar/TrafficInfo_selected.png',
-                    onPressed: ()=> _onItemTapped(1),
+                    imagePathSelected:
+                        'assets/images/navbar/TrafficInfo_selected.png',
+                    onPressed: () => _onItemTapped(1),
                     isSelected: _selectedIndex == 1, // Check here
                   ),
-
                   NavigationButton(
                     imagePath: 'assets/images/navbar/Home.png',
-                    imagePathSelected:  'assets/images/navbar/Home_selected.png',
-                    onPressed: ()=> _onItemTapped(2),
+                    imagePathSelected: 'assets/images/navbar/Home_selected.png',
+                    onPressed: () => _onItemTapped(2),
                     isSelected: _selectedIndex == 2, // Check here
                   ),
                   NavigationButton(
                     imagePath: 'assets/images/navbar/Message.png',
-                    imagePathSelected:  'assets/images/navbar/Message.png',
-                    onPressed: ()=> _onItemTapped(3),
+                    imagePathSelected: 'assets/images/navbar/Message.png',
+                    onPressed: () => _onItemTapped(3),
                     isSelected: _selectedIndex == 3, // Check here
                   ),
-
                   NavigationButton(
                     imagePath: 'assets/images/navbar/StudentChat.png',
-                    imagePathSelected:  'assets/images/navbar/StudentChat_selected.png',
-                    onPressed: ()=> _onItemTapped(4),
+                    imagePathSelected:
+                        'assets/images/navbar/StudentChat_selected.png',
+                    onPressed: () => _onItemTapped(4),
                     isSelected: _selectedIndex == 4, // Check here
                   ),
                 ],
               ),
             ),
-
           ),
         ),
       ),
