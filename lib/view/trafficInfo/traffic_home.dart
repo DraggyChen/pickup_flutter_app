@@ -32,7 +32,7 @@ class _TrafficInfoState extends State<TrafficInfo> {
               Center(
                 child: Text(
                   "交通資訊",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
               ),
               SizedBox(
