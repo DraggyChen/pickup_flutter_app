@@ -10,6 +10,7 @@ import 'package:pickup/view/register/personal_data.dart';
 import 'package:pickup/view/trafficInfo/traffic_home.dart';
 
 import '../carpool/carpool_home.dart';
+import '../map/TestMap.dart';
 
 class Navigation_Bar extends StatefulWidget {
   @override
@@ -44,6 +45,7 @@ class _NavigationBarState extends State<Navigation_Bar> {
 
       body: PageView(
         controller: _pageController,
+        physics: NeverScrollableScrollPhysics(), //禁止在頁面左右滑動切換畫面
         onPageChanged: (index) {
           setState(() {
             _selectedIndex = index;
@@ -54,7 +56,7 @@ class _NavigationBarState extends State<Navigation_Bar> {
           TrafficInfo(),
           // MyApp(),
           HomePage(),
-          Center(child: Text('Page 4 H')),
+          TestApp(),
           ForumHome(),
         ],
       ),
