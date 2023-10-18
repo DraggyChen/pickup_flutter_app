@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pickup/view/carpool/carpool_posts.dart';
 import 'package:pickup/view/carpool/carpool_topbar.dart';
 import 'package:pickup/view/forum/forum_categories.dart';
 import 'package:pickup/view/forum/forum_posts.dart';
@@ -53,28 +54,9 @@ class _ForumHomeState extends State<CarpoolHome> {
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
-                        /* 貼文類別篩選按鈕 */
-                        SizedBox(
-                          height: 8,
-                        ),
-                        ForumCategories(items: ["全部", "美食", "活動", "學校資訊"]),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        /* 貼文 */
-                        ForumPosts(
-                          name: '李小明',
-                          content: "This is an example content for the post...",
-                        ),
-                        SizedBox(height: 20,),
-                        ForumPosts(
-                          name: '王大美',
-                          content: "This is an example content for the post...",
-                        ),
-                        SizedBox(height: 20,),
-                        ForumPosts(
-                          name: 'Draggy',
-                          content: "This is an example content for the post...",
+                        /* 各個駕駛發車資訊 */
+                        CarpoolPosts(
+                            name: "4.5", content: "content"
                         ),
                       ],
                     ),

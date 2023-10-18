@@ -54,17 +54,12 @@ class _HomePageState extends State<HomePage> {
                     child: CircleImagePicker(hint: "頭貼", diameter: 120),
                   ),
                   SizedBox(width: 20),
-                  // Expanded(
-                  //     child: Align(
-                  //   alignment: Alignment.centerLeft,
-                  //   child: CircleImagePicker(hint: "頭貼", diameter: 120),
-                  // )),
+
                   Expanded(
                       child: Align(
                     alignment: Alignment.center,
                     child: Row(
                       children: [
-                        // SizedBox(width: 1,),
                         Text(
                           "NAME",
                           style: CustomStyles.TitleUsernameStyle,
