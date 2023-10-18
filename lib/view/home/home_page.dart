@@ -4,7 +4,7 @@ import 'package:pickup/utils/CircleImagePicker.dart';
 import 'package:pickup/view/home/home_styles.dart';
 import 'package:pickup/view/home/home_row_large.dart';
 import 'package:pickup/view/register/personal_data.dart';
-import 'package:pickup/view/settings/settings_page.dart';
+import 'package:pickup/view/settings/settings_home.dart';
 
 import 'home_row_small.dart';
 

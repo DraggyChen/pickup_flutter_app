@@ -9,6 +9,8 @@ import 'package:pickup/view/navigation/navigation_button.dart';
 import 'package:pickup/view/register/personal_data.dart';
 import 'package:pickup/view/trafficInfo/traffic_home.dart';
 
+import '../carpool/carpool_home.dart';
+
 class Navigation_Bar extends StatefulWidget {
   @override
   _NavigationBarState createState() => _NavigationBarState();
@@ -43,7 +45,7 @@ class _NavigationBarState extends State<Navigation_Bar> {
           });
         },
         children: [
-          TrafficInfo(),
+          CarpoolHome(),
           TrafficInfo(),
           // MyApp(),
           HomePage(),
