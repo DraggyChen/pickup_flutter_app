@@ -3,14 +3,24 @@ import 'package:flutter/material.dart';
 import '../../utils/CircleImagePicker.dart';
 
 class CarpoolPosts extends StatelessWidget {
-  final String name;
-  final String content;
+  final String starRate;
+  final String time;
+  final String passenger;
+  final String startStation;
+  final String endStation;
 
-  CarpoolPosts({required this.name, required this.content});
+  CarpoolPosts({
+    required this.starRate,
+    required this.time,
+    required this.passenger,
+    required this.startStation,
+    required this.endStation,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      constraints: BoxConstraints(maxHeight: 130.0), // 更改200.0為您想要的最大高度
       decoration: BoxDecoration(
         color: Colors.white, // 設置背景色為白色
         borderRadius: BorderRadius.circular(20.0), // 設置圓角
@@ -27,30 +37,29 @@ class CarpoolPosts extends StatelessWidget {
                   child: CircleImagePicker(hint: "頭貼", diameter: 90),
                 ),
                 SizedBox(width: 15.0),
-
                 Expanded(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround, // 修改此處
+                    mainAxisAlignment: MainAxisAlignment.start, // 將子小部件對齊到開頭
+                    mainAxisSize: MainAxisSize.min, // Column只佔據其子小部件所需的空間
                     children: [
                       /* 評分與公事包 */
                       Row(
                         children: [
-                          Text(name,
+                          Text(starRate,
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 15)),
+                                  fontWeight: FontWeight.bold, fontSize: 20)),
                           Icon(
                             Icons.star_rate,
-                            size: 30,
+                            size: 25,
                           ),
                           Image.asset(
                             'assets/images/carpool/Briefcase.png',
-                            width: 40,
-                            height: 40,
+                            width: 30,
+                            height: 30,
                             fit: BoxFit.cover,
                           ),
                         ],
                       ),
-
                       /* 發車時間、目前乘客 */
                       Row(
                         children: [
@@ -62,7 +71,7 @@ class CarpoolPosts extends StatelessWidget {
                           ),
                           Align(
                             alignment: Alignment.centerLeft,
-                            child: Text('16:30',
+                            child: Text(time,
                                 style: TextStyle(
                                     fontWeight: FontWeight.normal,
                                     fontSize: 15)),
@@ -72,14 +81,14 @@ class CarpoolPosts extends StatelessWidget {
                             alignment: Alignment.centerRight,
                             child: Image.asset(
                               'assets/images/carpool/Car.png',
-                              width: 50,
-                              height: 50,
+                              width: 40,
+                              height: 40,
                               fit: BoxFit.cover,
                             ),
                           ),
                           Align(
                             alignment: Alignment.centerRight,
-                            child: Text('1/3',
+                            child: Text(passenger,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 15)),
                           ),
@@ -96,7 +105,7 @@ class CarpoolPosts extends StatelessWidget {
                           ),
                           Align(
                             alignment: Alignment.centerLeft,
-                            child: Text('明德樓',
+                            child: Text(startStation,
                                 style: TextStyle(
                                     fontWeight: FontWeight.normal,
                                     fontSize: 12)),
@@ -110,7 +119,7 @@ class CarpoolPosts extends StatelessWidget {
                           ),
                           Align(
                             alignment: Alignment.centerRight,
-                            child: Text('A7站',
+                            child: Text(endStation,
                                 style: TextStyle(
                                     fontWeight: FontWeight.normal,
                                     fontSize: 12)),
@@ -119,6 +128,9 @@ class CarpoolPosts extends StatelessWidget {
                       )
                     ],
                   ),
+                ),
+                SizedBox(
+                  width: 10,
                 ),
                 /* 右邊私訊按鈕 */
                 Align(
@@ -146,6 +158,7 @@ class CarpoolPosts extends StatelessWidget {
               ],
             ),
           ),
+
         ],
       ),
     );

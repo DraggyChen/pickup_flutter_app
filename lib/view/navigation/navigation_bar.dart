@@ -75,7 +75,7 @@ class _NavigationBarState extends State<Navigation_Bar> {
 
             elevation: 0, // 刪除陰影
             child: Container( // 添加這個Container
-              height: Platform.isIOS ? 10 : 45, // 根據平台動態設定高度，使用import 'dart:io';
+              height: Platform.isIOS ? 40 : 45, // 根據平台動態設定高度，使用import 'dart:io';
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[

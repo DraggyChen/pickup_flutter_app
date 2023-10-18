@@ -56,8 +56,75 @@ class _ForumHomeState extends State<CarpoolHome> {
                       children: [
                         /* 各個駕駛發車資訊 */
                         CarpoolPosts(
-                            name: "4.5", content: "content"
+                            starRate: '4.5',
+                            time: '16:30',
+                            passenger: '1/3',
+                            startStation: '明德樓',
+                            endStation: 'A7站'),
+                        /* 距離下個Posts的間隔 */
+                        SizedBox(
+                          height: 20,
                         ),
+                        CarpoolPosts(
+                            starRate: '4.3',
+                            time: '15:00',
+                            passenger: '1/3',
+                            startStation: '明德樓',
+                            endStation: 'A8站'),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        CarpoolPosts(
+                            starRate: '4.3',
+                            time: '15:00',
+                            passenger: '1/3',
+                            startStation: '明德樓',
+                            endStation: 'A8站'),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        CarpoolPosts(
+                            starRate: '4.3',
+                            time: '15:00',
+                            passenger: '1/3',
+                            startStation: '明德樓',
+                            endStation: 'A8站'),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        CarpoolPosts(
+                            starRate: '4.3',
+                            time: '15:00',
+                            passenger: '1/3',
+                            startStation: '明德樓',
+                            endStation: 'A8站'),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        CarpoolPosts(
+                            starRate: '4.3',
+                            time: '15:00',
+                            passenger: '1/3',
+                            startStation: '明德樓',
+                            endStation: 'A8站'),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        CarpoolPosts(
+                            starRate: '4.3',
+                            time: '15:00',
+                            passenger: '1/3',
+                            startStation: '明德樓',
+                            endStation: 'A8站'),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        CarpoolPosts(
+                            starRate: '4.3',
+                            time: '15:00',
+                            passenger: '1/3',
+                            startStation: '明德樓',
+                            endStation: 'A8站'),
                       ],
                     ),
                   ),
